@@ -1,0 +1,17 @@
+.hero {
+    background-image: url(../../../assets/img/fondo.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.hero .contenedor{
+    display: grid;
+    height: 100vh;
+    align-content: center;
+}
+
+.hero .contenido {
+    text-align: center;
+    color: #ffffff;
+}
