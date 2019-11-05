@@ -1,0 +1,74 @@
+@import '../../../styles.scss';
+
+.contenedor-nav {
+  align-self: start;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  @include tableta {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.header {
+  .logo {
+    justify-self: center;
+    // margin-top: 1rem;
+    width: 5rem;
+    // margin-top: 2rem;
+    @include tableta {
+      // margin-top: 2rem;
+    }
+    @include desktop {
+      // margin-top: 1rem;
+    }
+  }
+  @include tableta {
+    padding: 0 5rem;
+  }
+  @include desktop {
+    padding: 0 5rem;
+  }
+}
+.navegacion {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  display: block;
+  @include tableta {
+    display: flex;
+  }
+  @include desktop {
+    display: flex;
+  }
+  align-content: center;
+  justify-content: space-between;
+  // margin-top: 2rem;
+  a {
+    user-select: none; 
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff81;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    color: $gris;
+    font-size: 1.3rem;
+    &:hover {
+      // text-decoration-line: underline;
+      background-color: #ffffffb7;
+    }
+    
+  }
+  @include desktop {
+    text-align: right;
+  }
+}
+.active-link {
+  background-color: #ffffffd7!important;
+  color: #333333!important;
+}

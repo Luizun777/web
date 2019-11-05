@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { InicioComponent } from './Page/inicio/inicio.component';
+import { PaginasListComponent } from './Page/paginas-list/paginas-list.component';
+import { InfoComponent } from './Page/info/info.component';
+
+const routes: Routes = [
+  {path:'Inicio', component: InicioComponent, data: { title: 'Heroes List' }},
+  {path:'paginasLista', component: PaginasListComponent},
+  {path:'info', component: InfoComponent},
+  {path:'**', pathMatch:'full', redirectTo:'Inicio'},
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
