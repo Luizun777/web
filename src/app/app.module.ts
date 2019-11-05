@@ -8,6 +8,8 @@ import { NavbarComponent } from './Page/navbar/navbar.component';
 import { FooterComponent } from './Page/footer/footer.component';
 import { InicioComponent } from './Page/inicio/inicio.component';
 import { InfoComponent } from './Page/info/info.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { InfoComponent } from './Page/info/info.component';
   imports: [
     CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
