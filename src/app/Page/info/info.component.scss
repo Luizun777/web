@@ -11,21 +11,15 @@
       text-align: center;
     }
     @include desktop {
-      text-align: left; 
+      text-align: right; 
     }
   }
-  // @include tableta {
-  //   width: 100%;  
-  // }
-  // @include desktop {
-  //   width: 100vh;  
-  // }
 }
 
 .hero {
   display: grid;
   align-content: center;
-  background-image: url(../../../assets/img/code3.jpg);
+  background-image: url(../../../assets/img/code2.jpg);
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
@@ -35,5 +29,12 @@
   @include desktop {
     background-position: center center;
   }
+}
 
+h1 {
+  font-size: 12rem;
+}
+
+h3 {
+  font-size: 5rem;
 }

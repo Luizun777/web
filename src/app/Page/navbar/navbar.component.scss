@@ -17,15 +17,7 @@
 .header {
   .logo {
     justify-self: center;
-    // margin-top: 1rem;
     width: 5rem;
-    // margin-top: 2rem;
-    @include tableta {
-      // margin-top: 2rem;
-    }
-    @include desktop {
-      // margin-top: 1rem;
-    }
   }
   @include tableta {
     padding: 0 5rem;
@@ -46,7 +38,6 @@
   }
   align-content: center;
   justify-content: space-between;
-  // margin-top: 2rem;
   a {
     user-select: none; 
     cursor: pointer;
