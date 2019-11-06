@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1572998398438,
+  "timestamp": 1573056154035,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -20,6 +20,7 @@
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
         "/assets/img/.directory",
+        "/assets/img/Percy gris lOGO 4.webp",
         "/assets/img/code.png",
         "/assets/img/code.svg",
         "/assets/img/code1.jpg",
@@ -27,6 +28,7 @@
         "/assets/img/code3.jpg",
         "/assets/img/code4.jpg",
         "/assets/img/contacto.jpg",
+        "/assets/img/d9da1d_ecebc6b2bd7a45029c4595dcae4a9d72_mv2.jpg",
         "/assets/img/fondo.jpg",
         "/assets/img/fondo1.jpg",
         "/assets/img/taco.png",
@@ -73,6 +75,7 @@
     "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/assets/img/.directory": "99da9a239a701556758b85ca1a32283217a718e1",
+    "/assets/img/Percy gris lOGO 4.webp": "f9a8ad995b1b454cd67d53ce172799fa62a2e6a9",
     "/assets/img/code.png": "0c06d6c773dde695bf52897311d79674a464d25a",
     "/assets/img/code.svg": "5983cbd61cc42fd407d4a6cab8c1ad451f83d034",
     "/assets/img/code1.jpg": "a34a4aedfa06485aa2d40431aef60c6a8c2bc2a0",
@@ -80,6 +83,7 @@
     "/assets/img/code3.jpg": "336d50dbe30b603a154ffed70469ac87ba20f24b",
     "/assets/img/code4.jpg": "e05c176915120377a1f4a5794175b14d77b11235",
     "/assets/img/contacto.jpg": "d6af3f7e14fd5d0d06b4ad2719447297938aec6a",
+    "/assets/img/d9da1d_ecebc6b2bd7a45029c4595dcae4a9d72_mv2.jpg": "b7d4d290bacedb7f3f604d240b4e5f7ece18bd43",
     "/assets/img/fondo.jpg": "bada528027ed3eb0df6adfca6f70f6a8c2431f3b",
     "/assets/img/fondo1.jpg": "67c9679fdb88270eac34d32b1762e23f9a4dce65",
     "/assets/img/taco.png": "1e4d6a04766a56eaf64fb483d9cc53ba5761981a",
