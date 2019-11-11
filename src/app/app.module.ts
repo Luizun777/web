@@ -4,20 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './Page/navbar/navbar.component';
-import { FooterComponent } from './Page/footer/footer.component';
-import { InicioComponent } from './Page/inicio/inicio.component';
-import { InfoComponent } from './Page/info/info.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { LobbyComponent } from './lobby/lobby.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    InicioComponent,
-    InfoComponent
+    LobbyComponent
   ],
   imports: [
     CommonModule,

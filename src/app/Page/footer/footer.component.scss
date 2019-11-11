@@ -25,5 +25,67 @@
 }
 
 .widget {
-  padding-left: 1rem;
+  padding-left: 2rem;
+  padding-right: 8rem;
+  @include tableta {
+    padding-left: 3rem;
+    padding-right: 15rem;
+  }
+  @include desktop {
+    padding-left: 2rem;
+    padding-right: 0rem;
+  }
+}
+
+/* Red Social */
+.sociales ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  flex:1 0 auto;
+  list-style: none;
+}
+.sociales ul li {
+  margin-right: 3rem;
+  @include tableta {
+    margin-right: 2.5rem;
+  }
+  @include desktop {
+    margin-right: 2rem;
+  }
+}
+.sociales ul li:last-of-type {
+  margin-right: 0;
+}
+.sociales ul li a {
+  text-decoration: none;
+}
+.sociales ul li a:before {
+  font-family: "Font Awesome 5 Brands";
+  color: $blanco;
+  font-size: 2.5rem;
+}
+.sociales ul li a[href*='facebook']::before {
+  content: "\f39e";
+}
+
+.sociales ul li a[href*='twitter']::before {
+  content: "\f099";
+}
+.sociales ul li a[href*='youtube']::before {
+  content: "\f431";
+}
+.sociales ul li a[href*='instagram']::before {
+  content: "\f16d";
+}
+.sociales ul li a[href*='pinterest']::before {
+  content: "\f231 ";
+}
+.sociales ul li span{
+  display: none;
 }

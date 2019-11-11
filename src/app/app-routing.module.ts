@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { InicioComponent } from './Page/inicio/inicio.component';
-import { InfoComponent } from './Page/info/info.component';
+import { LobbyComponent } from './lobby/lobby.component';
 
 const routes: Routes = [
-  {path:'Inicio', component: InicioComponent, data: { title: 'Heroes List' }},
   {
-    path: 'paginas',
-    loadChildren: './Page/paginas-list/paginas.module#PaginasModule'
+    path: 'web',
+    loadChildren: './Page/page.module#PagesModule'
   },
-  {path:'info', component: InfoComponent},
-  {path:'**', pathMatch:'full', redirectTo:'Inicio'},
+  {path:'lobby', component: LobbyComponent},
+  {path:'**', pathMatch:'full', redirectTo:'web/Inicio'},
 ];
 
 @NgModule({
