@@ -5,11 +5,15 @@ import { LobbyComponent } from './lobby/lobby.component';
 
 const routes: Routes = [
   {
+    path: 'cv',
+    loadChildren: './cv/cv.module#CvModule'
+  },
+  {
     path: 'web',
     loadChildren: './Page/page.module#PagesModule'
   },
   {path:'lobby', component: LobbyComponent},
-  {path:'**', pathMatch:'full', redirectTo:'web/Inicio'},
+  {path:'**', pathMatch:'full', redirectTo:'cv'},
 ];
 
 @NgModule({

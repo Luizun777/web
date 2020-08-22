@@ -128,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PaginaWeb"
+    }
+  },
+  "defaultProject": "PaginaWeb",
+  "cli": {
+    "analytics": false
+  }
 }
