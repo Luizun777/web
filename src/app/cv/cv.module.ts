@@ -5,10 +5,13 @@ import { CvComponent } from './cv.component';
 import { CvRoutingModule } from './cv-routing.module';
 import { YoComponent } from './yo/yo.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   imports: [
     CommonModule,
-    CvRoutingModule
+    CvRoutingModule,
+    FontAwesomeModule
   ],
   declarations: [
     CvComponent,

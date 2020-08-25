@@ -3,11 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { CvComponent } from './cv.component';
 
+import { YoComponent } from './yo/yo.component';
+
 const routes: Routes = [
   {
     path: '',
     component: CvComponent,
-    children: [],
+    children: [
+      {path:'Inicio', component: YoComponent},
+    ],
   }
 ];
 

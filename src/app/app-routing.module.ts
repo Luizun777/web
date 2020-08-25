@@ -13,7 +13,7 @@ const routes: Routes = [
     loadChildren: './Page/page.module#PagesModule'
   },
   {path:'lobby', component: LobbyComponent},
-  {path:'**', pathMatch:'full', redirectTo:'cv'},
+  {path:'**', pathMatch:'full', redirectTo:'cv/Inicio'},
 ];
 
 @NgModule({
