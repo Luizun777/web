@@ -1,9 +1,11 @@
+@import '../../styles.scss';
+
 .contenedor-cv {
   display: grid;
   grid-template-columns: auto 1fr;
   margin: 0 auto;
-  width: 30%;
-  background: rgba(255, 255, 255, 0.50);
+  width: 90%;
+  background: rgba(255, 255, 255, 0.9);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -12,13 +14,31 @@
   padding: 1rem;
   grid-gap: 1rem;
   border-radius: 5px;
+  @include telefono {
+    width: 75%;
+  }
+  @include tableta {
+    width: 50%;
+  }
+  @include desktop {
+    width: 35%;
+  }
   .paginado-cv {
     display: grid;
     grid-gap: 1rem;
+    align-self: center;
     button {
-      background: #eeeeee;
+      cursor: pointer;
+      border-radius: 5px;
+      background: #333;
       border: none !important;
       padding: 0.5rem;
+      fa-icon {
+        color: #ffffff;
+      }
     }
+  }
+  .contenido {
+    align-self: center;
   }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { faAddressCard, faUserTie } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faUserTie, faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { Route } from '@angular/compiler/src/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cv',
@@ -10,10 +12,17 @@ export class CvComponent implements OnInit {
 
   idCard = faAddressCard;
   experienia = faUserTie;
+  juegos = faGamepad;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  paginador(pagina: string) {
+    this.router.navigateByUrl(`/cv/${pagina}`);
   }
 
 }

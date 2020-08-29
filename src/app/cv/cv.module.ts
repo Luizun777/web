@@ -6,6 +6,7 @@ import { CvRoutingModule } from './cv-routing.module';
 import { YoComponent } from './yo/yo.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { JuegosComponent } from './juegos/juegos.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   ],
   declarations: [
     CvComponent,
-    YoComponent
+    YoComponent,
+    JuegosComponent
   ]
 })
 export class CvModule { }

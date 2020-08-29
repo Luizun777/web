@@ -1,1 +1,28 @@
-<p>yo works!</p>
+<div class="contenido-info">
+  <img class="foto-perfil" src="https://scontent.fmex18-1.fna.fbcdn.net/v/t1.0-9/40137855_10214698484648085_48404174051737600_n.jpg?_nc_cat=102&_nc_sid=174925&_nc_eui2=AeHrKRJdYxMdysf6J_V3UqgJPjjIhYHfiCs-OMiFgd-IKxO_sBbiR8MJkeY2iZ-ZnbU&_nc_ohc=4UweqsvXHccAX-5d_aC&_nc_ht=scontent.fmex18-1.fna&oh=fb55e2a642ccce6c5c462db33423d15f&oe=5F695A6E" alt="Perfil">
+  <div class="datos">
+    <h4>Luis Acosta Tinajero</h4>
+    <div class="pais-contenio">
+      <img class="bandera" src="../../../assets/img/mx.svg" alt="Mexíco">
+      <div class="pais">Ciudad de México</div>
+    </div>
+    <div class="fecha-nacimiento">{{edad}} año <fa-icon [icon]="separador"></fa-icon> 26 enero {{year}}</div>
+    <div class="desc">
+      Trabajo como desarrollador de páginas web usando fromt con Angular, .Net Core 2.0 para el back aunque también he usado Node.js muy básico y como base de datos SQL.
+    </div>
+    <div class="redes-lista">
+      <a class="red" [href]="linkGitHub" target="_blank" data-toggle="tooltip" data-placement="top" title="GitHub">
+        <fa-icon [icon]="iconGitHub"></fa-icon>
+      </a>
+      <a class="red" [href]="linkFacebook" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+        <fa-icon [icon]="iconFacebook"></fa-icon>
+      </a>
+      <a class="red" [href]="linkLinkedin" target="_blank" data-toggle="tooltip" data-placement="top" title="Linkedin">
+        <fa-icon [icon]="iconLinkedin"></fa-icon>
+      </a>
+      <a class="red" href="mailto:luisacosta360@gmail.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Correo">
+        <fa-icon [icon]="iconCorreo"></fa-icon>
+      </a>
+    </div>
+  </div>
+</div>
