@@ -14,6 +14,7 @@ export class JuegosComponent implements OnInit {
 
   // link
   linkXbox: string = 'https://account.xbox.com/es-mx/profile?gamertag=PrecursorSparta';
+  linkSteam: string = 'https://steamcommunity.com/id/solid777/';
 
   constructor() { }
 
