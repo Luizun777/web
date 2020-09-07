@@ -5,6 +5,7 @@ import { CvComponent } from './cv.component';
 
 import { YoComponent } from './yo/yo.component';
 import { JuegosComponent } from './juegos/juegos.component';
+import { ExpComponent } from './exp/exp.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
     children: [
       {path:'Inicio', component: YoComponent},
       {path:'Juegos', component: JuegosComponent},
+      {path:'Experiencia', component: ExpComponent},
     ],
   }
 ];
