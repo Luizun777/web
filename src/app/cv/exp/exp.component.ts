@@ -16,7 +16,7 @@ export class ExpComponent implements OnInit {
       titulo: 'Servicio de Administración Tributaria (SAT)',
       fecha: 'Noviembre 2017 - Septiembre 2019',
       descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, natus? Sint nisi minus ea nemo libero accusantium itaque ad! Vero voluptatem eveniet, deleniti quia ullam fuga recusandae! Praesentium, nam rerum.',
-      tags: ['html5','CSS3', 'Angular 6+','.Net Core 2.0', 'Git', 'JavaScript', 'typescript', 'Servidor IIS']
+      tags: ['html5','CSS3', 'Angular 6+','.Net Core 2.0', 'Git', 'JavaScript', 'typescript', 'Servidor IIS', 'Angular Material', 'PrimeNG','SQL']
     },
     {
       show: false,
@@ -25,7 +25,7 @@ export class ExpComponent implements OnInit {
       titulo: 'ARCSA Servicios S.A. de C.V.',
       fecha: 'Septiembre 2019 - Actual',
       descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, natus? Sint nisi minus ea nemo libero accusantium itaque ad! Vero voluptatem eveniet, deleniti quia ullam fuga recusandae! Praesentium, nam rerum.',
-      tags: ['html5','CSS3', 'Angular 8+', 'JavaScript', 'typescript','git','github']
+      tags: ['html5','SCSS', 'Angular 8+', 'JavaScript', 'typescript','git','github', 'Angular Material', 'PrimeNG']
     }
   ];
 

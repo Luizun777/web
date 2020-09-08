@@ -1,1 +1,15 @@
 @import '../styles.scss';
+
+.fondo {
+  display: grid;
+  align-content: center;
+  background-image: url(../assets/img/code3.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left;
+  @include desktop {
+    background-position: center center;
+  }
+}
