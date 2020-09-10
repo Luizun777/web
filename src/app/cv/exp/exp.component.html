@@ -12,7 +12,15 @@
 
     <div [id]="experiencia.collaps" class="collapse" [ngClass]="{'show': i === 0}" [attr.aria-labelledby]="experiencia.head" data-parent="#accordionExample">
       <div class="card-body">
+        <div class="puesto">
+          {{experiencia.puesto}}
+        </div>
         {{experiencia.descripcion}}
+        <div class="actividades-list">
+          <div class="actividad" *ngFor="let actividad of experiencia.actividades">
+            <fa-icon [icon]="separador"></fa-icon> {{actividad}}
+          </div>
+        </div>
         <div class="tags">
           <div class="tag" *ngFor="let tag of experiencia.tags">{{tag}}</div>
         </div>
