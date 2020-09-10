@@ -13,7 +13,7 @@ export class JuegosComponent implements OnInit {
   iconSteam = faSteam;
 
   // link
-  linkXbox: string = 'https://account.xbox.com/es-mx/profile?gamertag=PrecursorSparta';
+  linkXbox: string = 'https://account.xbox.com/es-mx/profile?gamertag=Luizun';
   linkSteam: string = 'https://steamcommunity.com/id/solid777/';
 
   constructor() { }
