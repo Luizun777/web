@@ -11,6 +11,17 @@ export class ExpComponent implements OnInit {
   experiencias: any = [
     {
       show: true,
+      head: 'collapse-2',
+      collaps: 'collaps-2',
+      titulo: 'ARCSA Servicios S.A. de C.V.',
+      puesto: 'Desarrollador front-end Angular',
+      fecha: 'Septiembre 2019 - Actual',
+      descripcion: '',
+      actividades: ['Desarrollo de aplicación web para herramientas internas.', 'Mantenimiento y actualizaciones de proyectos', 'Integración con REST APIs y servicios en tiempo real utilizando websockets', 'Realizar deploy de código a servidor de producción', 'Actualizar versiones de angular'],
+      tags: ['html5','SCSS', 'Angular 8+', 'JavaScript', 'typescript','git','github', 'Angular Material', 'PrimeNG', 'NPM', 'YARN', 'NVM', 'Bootstrap', 'PrimeNG']
+    },
+    {
+      show: false,
       head: 'collapse-1',
       collaps: 'collaps-1',
       titulo: 'Servicio de Administración Tributaria (SAT)',
@@ -18,18 +29,7 @@ export class ExpComponent implements OnInit {
       fecha: 'Noviembre 2017 - Septiembre 2019',
       descripcion: '',
       actividades: ['Desarrollo de aplicación web para herramientas internas.','Configuración de servidores IIS','Desarrollo de páginas Web con Angular 6+', 'Desarrollo de peticiones api rest con .Net Core 2.0', 'Manejo de bases de datos con SQL', 'Realizar deploy de código a servidor de producción'],
-      tags: ['html5','CSS3', 'Angular 6+','.Net Core 2.0', 'Git', 'JavaScript', 'typescript', 'Servidor IIS', 'Angular Material', 'PrimeNG','SQL']
-    },
-    {
-      show: false,
-      head: 'collapse-2',
-      collaps: 'collaps-2',
-      titulo: 'ARCSA Servicios S.A. de C.V.',
-      puesto: 'Desarrollador front-end Angular',
-      fecha: 'Septiembre 2019 - Actual',
-      descripcion: '',
-      actividades: ['Desarrollo de aplicación web para herramientas internas.', 'Mantenimiento y actualizaciones de proyectos', 'Integración con REST APIs y servicios en tiempo real utilizando websockets', 'Realizar deploy de código a servidor de producción'],
-      tags: ['html5','SCSS', 'Angular 8+', 'JavaScript', 'typescript','git','github', 'Angular Material', 'PrimeNG']
+      tags: ['html5','CSS3', 'AngularJs', 'Angular 6+','.Net Core 2.0', 'Git', 'JavaScript', 'typescript', 'Servidor IIS', 'Angular Material', 'PrimeNG','SQL', 'NPM', 'Bootstrap', 'PrimeNG']
     }
   ];
 
