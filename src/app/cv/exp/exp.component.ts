@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CvService } from '../../services/cv.service';
 import { faCaretDown, faCaretRight, faCode } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,38 +9,23 @@ import { faCaretDown, faCaretRight, faCode } from '@fortawesome/free-solid-svg-i
 })
 export class ExpComponent implements OnInit {
 
-  experiencias: any = [
-    {
-      show: true,
-      head: 'collapse-2',
-      collaps: 'collaps-2',
-      titulo: 'ARCSA Servicios S.A. de C.V.',
-      puesto: 'Desarrollador front-end Angular',
-      fecha: 'Septiembre 2019 - Actual',
-      descripcion: '',
-      actividades: ['Desarrollo de aplicación web para herramientas internas.', 'Mantenimiento y actualizaciones de proyectos', 'Integración con REST APIs y servicios en tiempo real utilizando websockets', 'Realizar deploy de código a servidor de producción', 'Actualizar versiones de angular'],
-      tags: ['html5','SCSS', 'Angular 8+', 'JavaScript', 'typescript','git','github', 'Angular Material', 'PrimeNG', 'NPM', 'YARN', 'NVM', 'Bootstrap', 'PrimeNG']
-    },
-    {
-      show: false,
-      head: 'collapse-1',
-      collaps: 'collaps-1',
-      titulo: 'Servicio de Administración Tributaria (SAT)',
-      puesto: 'Desarrollador Full Stack',
-      fecha: 'Noviembre 2017 - Septiembre 2019',
-      descripcion: '',
-      actividades: ['Desarrollo de aplicación web para herramientas internas.','Configuración de servidores IIS','Desarrollo de páginas Web con Angular 6+', 'Desarrollo de peticiones api rest con .Net Core 2.0', 'Manejo de bases de datos con SQL', 'Realizar deploy de código a servidor de producción'],
-      tags: ['html5','CSS3', 'AngularJs', 'Angular 6+','.Net Core 2.0', 'Git', 'JavaScript', 'typescript', 'Servidor IIS', 'Angular Material', 'PrimeNG','SQL', 'NPM', 'Bootstrap', 'PrimeNG']
-    }
-  ];
+  experiencias: any = [];
 
   iconFlecha = faCaretRight;
   iconSelect = faCaretDown;
   separador = faCode;
 
-  constructor() { }
+  constructor(
+    public cvSrv: CvService
+  ) { }
 
   ngOnInit() {
+    this.cargarInfo();
+    this.escucharServer();
+  }
+
+  cargarInfo() {
+    this.cvSrv.experiencias.length ? this.experiencias = this.cvSrv.experiencias : this.cvSrv.getExperiencia();
   }
 
   cambiar(index: number, show: boolean) {
@@ -48,6 +34,10 @@ export class ExpComponent implements OnInit {
       return
     }
     this.experiencias.forEach((exp: any, i: number) => exp.show = index === i);
+  }
+
+  escucharServer() {
+    this.cvSrv.changeExp.subscribe((change: any) => this.experiencias = change);
   }
 
 }
