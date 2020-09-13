@@ -30,9 +30,15 @@
     <div class="peticiones">
       <div class="peticion">
         <div class="nombre-peticion">
-          Obtener experiencia laboral
+          Obtener experiencias laborales
         </div>
-        <a [href]="url" target="_blank"><span class="tipo">[GET]</span> {{url}}</a>
+        <a [href]="url" target="_blank"><span class="tipo">[GET]</span> <span class="url">{{url}}</span></a>
+      </div>
+      <div class="peticion">
+        <div class="nombre-peticion">
+          Obtener experiencia laboral por ID
+        </div>
+        <a [href]="url+'/1'" target="_blank"><span class="tipo">[GET]</span> <span class="url">{{url}}/:id</span></a>
       </div>
     </div>
   </div>
