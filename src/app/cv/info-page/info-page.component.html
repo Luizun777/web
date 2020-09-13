@@ -4,6 +4,9 @@
       <fa-icon class="angular" [icon]="iconAngular"></fa-icon>
       <h5>ngular <span class="version tirulo">v8.2.13</span></h5>
     </div>
+    <div class="contenido-subtitulo">
+      <fa-icon [icon]="iconGithub"></fa-icon> Github
+    </div>
     <div class="lista-paquetes">
       <div class="paquete"><fa-icon [icon]="iconTerminal"></fa-icon> bootstrap <span class="version">v4.5.2</span></div>
       <div class="paquete"><fa-icon [icon]="iconTerminal"></fa-icon> angular-fontawesome <span class="version">v0.5.0</span></div>
@@ -15,11 +18,22 @@
       <fa-icon class="node" [icon]="iconNode"></fa-icon>
       <span class="version tirulo">v14.9.0</span>
     </div>
+    <div class="contenido-subtitulo">
+      <fa-icon [icon]="iconServer"></fa-icon> Heroku
+    </div>
     <div class="lista-paquetes">
       <div class="paquete"><fa-icon [icon]="iconTerminal"></fa-icon> express <span class="version">v4.14.1</span></div>
       <div class="paquete"><fa-icon [icon]="iconTerminal"></fa-icon> typescript <span class="version">v4.0.0</span></div>
       <div class="paquete"><fa-icon [icon]="iconTerminal"></fa-icon> body-parse <span class="version">v0.1.0</span></div>
       <div class="paquete"><fa-icon [icon]="iconTerminal"></fa-icon> cors <span class="version">v2.8.5</span></div>
+    </div>
+    <div class="peticiones">
+      <div class="peticion">
+        <div class="nombre-peticion">
+          Obtener experiencia laboral
+        </div>
+        <a [href]="url" target="_blank"><span class="tipo">[GET]</span> {{url}}</a>
+      </div>
     </div>
   </div>
 </div>
