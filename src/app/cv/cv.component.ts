@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faAddressCard, faUserTie, faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faUserTie, faGamepad, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,6 +12,7 @@ export class CvComponent implements OnInit {
   idCard = faAddressCard;
   experienia = faUserTie;
   juegos = faGamepad;
+  info = faInfoCircle;
 
   constructor(
     private router: Router

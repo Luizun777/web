@@ -8,6 +8,7 @@ import { YoComponent } from './yo/yo.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { JuegosComponent } from './juegos/juegos.component';
 import { ExpComponent } from './exp/exp.component';
+import { InfoPageComponent } from './info-page/info-page.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { ExpComponent } from './exp/exp.component';
     CvComponent,
     YoComponent,
     JuegosComponent,
-    ExpComponent
+    ExpComponent,
+    InfoPageComponent
   ]
 })
 export class CvModule { }

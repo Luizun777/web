@@ -11,6 +11,7 @@ export class ExpComponent implements OnInit {
 
   experiencias: any = [];
 
+  // icons
   iconFlecha = faCaretRight;
   iconSelect = faCaretDown;
   separador = faCode;
