@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faAddressCard, faUserTie, faGamepad, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
+import { CvService } from '../services/cv.service';
 
 @Component({
   selector: 'app-cv',
@@ -15,10 +16,12 @@ export class CvComponent implements OnInit {
   info = faInfoCircle;
 
   constructor(
+    public cvSrv: CvService,
     private router: Router
   ) { }
 
   ngOnInit() {
+    this.cvSrv.getExperiencia();
   }
 
   paginador(pagina: string) {
