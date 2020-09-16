@@ -21,6 +21,7 @@ export class ExpComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.cvSrv.getExperiencia();
     this.cargarInfo();
     this.escucharServer();
   }
