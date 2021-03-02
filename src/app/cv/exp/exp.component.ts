@@ -25,10 +25,13 @@ export class ExpComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.escucharServer();
     this.loading = false;
     this.errorApi = false;
     this.experiencias = this.cvSrv.experiencias;
-    this.escucharServer();
+    if (this.cvSrv.experiencias.length === 0) {
+      this.cargarInfo();
+    }
   }
 
   cargarInfo() {
