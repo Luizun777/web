@@ -1,0 +1,53 @@
+<!-- <h4>Experiencias</h4> -->
+<div class="accordion" id="accordion">
+  <ng-container *ngIf="errorApi; else noError">
+    <div class="conteido-carga">
+      <div class="mess-error">
+        Ocurrió un error!!! <fa-icon [icon]="faceSad"></fa-icon>
+      </div>
+    </div>
+    <div class="conteido-carga">
+      <button class="btn-recarga" (click)="cargarInfo()">
+        <fa-icon [icon]="cargar"></fa-icon> Volver a cargar
+      </button>
+    </div>
+  </ng-container>
+  <ng-template #noError>
+    <ng-container *ngIf="loading; else experienciasExist">
+      <div class="conteido-carga">
+        <div class="spinner-grow text-dark" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #experienciasExist>
+      <div class="card" *ngFor="let experiencia of experiencias; let i = index">
+        <div class="card-header" [id]="'collapse-'+i">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" [attr.data-target]="'#collaps-'+i" aria-expanded="false" [attr.aria-controls]="'collaps-'+i" (click)="cambiar(i, experiencia.show)">
+              <div class="nombre-empresa"><fa-icon [icon]="experiencia.show ? iconSelect : iconFlecha"></fa-icon> {{experiencia.titulo}}</div>
+              <div class="fecha">{{experiencia.fecha}}</div>
+            </button>
+          </h2>
+        </div>
+    
+        <div [id]="'collaps-'+i" class="collapse" [ngClass]="{'show': i === 0}" [attr.aria-labelledby]="'collapse-'+i" data-parent="#accordion">
+          <div class="card-body">
+            <div class="puesto">
+              {{experiencia.puesto}}
+            </div>
+            {{experiencia.descripcion}}
+            <div class="actividades-list">
+              <div class="actividad" *ngFor="let actividad of experiencia.actividades">
+                <fa-icon [icon]="separador"></fa-icon> {{actividad}}
+              </div>
+            </div>
+            <div class="tags">
+              <div class="tag" *ngFor="let tag of experiencia.tags">{{tag}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ng-template>
+</div>
