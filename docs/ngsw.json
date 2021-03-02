@@ -1,20 +1,36 @@
 {
   "configVersion": 1,
-  "timestamp": 1600796081972,
+  "timestamp": 1614646034248,
   "index": "/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
       "urls": [
-        "/5-es2015.21ca4e4ed6908d0ded9b.js",
-        "/5-es5.21ca4e4ed6908d0ded9b.js",
-        "/6-es2015.af418f605c569c18bf00.js",
-        "/6-es5.af418f605c569c18bf00.js",
-        "/7-es2015.d4f5f994b7dd699e74b4.js",
-        "/7-es5.d4f5f994b7dd699e74b4.js",
-        "/assets/.directory",
+        "/4.3b8a4396d8a971681620.js",
+        "/5.6b04bd7a43b5a8e2e6c7.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.3869dfb40a2c7467d558.js",
+        "/manifest.webmanifest",
+        "/polyfills.00096ed7d93ed26ee6df.js",
+        "/runtime.b5d552401db09eece971.js",
+        "/styles.ad979b208c4a852a0e03.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
         "/assets/css/fontawesome-all.min.css",
         "/assets/css/styles.css",
         "/assets/icons/icon-128x128.png",
@@ -60,42 +76,19 @@
         "/assets/webfonts/fa-solid-900.ttf",
         "/assets/webfonts/fa-solid-900.woff",
         "/assets/webfonts/fa-solid-900.woff2",
-        "/favicon.ico",
-        "/index.html",
-        "/main-es2015.0790ca75c02c6267d44a.js",
-        "/main-es5.0790ca75c02c6267d44a.js",
-        "/manifest.webmanifest",
-        "/polyfills-es2015.2987770fde9daa1d8a2e.js",
-        "/polyfills-es5.6696c533341b95a3d617.js",
-        "/runtime-es2015.1edd2fcf3f9b8f481724.js",
-        "/runtime-es5.1edd2fcf3f9b8f481724.js",
-        "/styles.c61129d603e1c8706523.css"
-      ],
-      "patterns": []
-    },
-    {
-      "name": "assets",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
-      "urls": [
-        "/code2.65157ddb7f7db2014679.jpg",
-        "/code3.8d9d8b27d5f6a5ac5290.jpg",
-        "/contacto.4de5bafc5c970229aa86.jpg",
-        "/fondo.5b871caca081996e2bd9.jpg",
-        "/fondo1.da4119e1652159dbe5fb.png"
+        "/code2.19e5d7d983adb8c3dbfc.jpg",
+        "/code3.68d2af8a14df758183ec.jpg",
+        "/contacto.1816bb4e9d30489f550d.jpg",
+        "/fondo.becc209b4e4135c633f4.jpg",
+        "/fondo1.ecc714134e57e51eccd0.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/5-es2015.21ca4e4ed6908d0ded9b.js": "62e4771034e4346e8b40223bee5b2db9d9f152dc",
-    "/5-es5.21ca4e4ed6908d0ded9b.js": "c596bf32b30283c0ccd8d6a7770a289aaa16eb07",
-    "/6-es2015.af418f605c569c18bf00.js": "4617f06bf65701f0a1ec32b2195a212dff32167f",
-    "/6-es5.af418f605c569c18bf00.js": "ef6beca2ce63e62f8d6215f9e0f6132cb4067ccc",
-    "/7-es2015.d4f5f994b7dd699e74b4.js": "c0425313ef21241e75bfa3f642e2407fe6be619b",
-    "/7-es5.d4f5f994b7dd699e74b4.js": "b5eb15662fa4c4853099712d82e2dfc08375fbc5",
-    "/assets/.directory": "8ff1b58d3837ea8b90aabda85a22edf0c7b7f17f",
+    "/4.3b8a4396d8a971681620.js": "a871da7a17c7ef3721e4d1e13d090fd9acc9299a",
+    "/5.6b04bd7a43b5a8e2e6c7.js": "86654ba00e3fd16d9a298250a135a977829d4b69",
     "/assets/css/fontawesome-all.min.css": "c7a5a4d3e4a69144794861b9119bb4dd1a106177",
     "/assets/css/styles.css": "959b270f2e65cde759961af1a2b61ab8b9ceded6",
     "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
@@ -120,7 +113,7 @@
     "/assets/img/fondo.jpg": "bada528027ed3eb0df6adfca6f70f6a8c2431f3b",
     "/assets/img/fondo1.png": "0de75ba720ade9cff30f8f59c4b8560b6ad2ccd5",
     "/assets/img/fondo2.jpg": "fb1148c55889954e627c091269d6edb6cf1f46df",
-    "/assets/img/luizun.jpg": "9fa9a65ef94f99b4ffeec2f0a69b92ea18820a40",
+    "/assets/img/luizun.jpg": "77dc2a25cf970a3da9fc244153999112eea55130",
     "/assets/img/mx.svg": "28301bb92531c7b7bd1f4cb5bb2e5fc455818fb0",
     "/assets/img/taco.png": "1e4d6a04766a56eaf64fb483d9cc53ba5761981a",
     "/assets/scss/_mixins.scss": "f9cb5a2d2b6cbb8e1d7a5680158a11bc483e7200",
@@ -141,21 +134,18 @@
     "/assets/webfonts/fa-solid-900.ttf": "30a79d6bdc0da59d6b4230e5d04b2da4d9610f3d",
     "/assets/webfonts/fa-solid-900.woff": "73fd648469c2a28f3b19c8c07057d3ca6b32d79a",
     "/assets/webfonts/fa-solid-900.woff2": "fe366898f9b2cc0e43366289503d5a718f0fd06f",
-    "/code2.65157ddb7f7db2014679.jpg": "877c494a886170ef739bbe4e2e9659bf2b5a0764",
-    "/code3.8d9d8b27d5f6a5ac5290.jpg": "336d50dbe30b603a154ffed70469ac87ba20f24b",
-    "/contacto.4de5bafc5c970229aa86.jpg": "d6af3f7e14fd5d0d06b4ad2719447297938aec6a",
+    "/code2.19e5d7d983adb8c3dbfc.jpg": "877c494a886170ef739bbe4e2e9659bf2b5a0764",
+    "/code3.68d2af8a14df758183ec.jpg": "336d50dbe30b603a154ffed70469ac87ba20f24b",
+    "/contacto.1816bb4e9d30489f550d.jpg": "d6af3f7e14fd5d0d06b4ad2719447297938aec6a",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/fondo.5b871caca081996e2bd9.jpg": "bada528027ed3eb0df6adfca6f70f6a8c2431f3b",
-    "/fondo1.da4119e1652159dbe5fb.png": "0de75ba720ade9cff30f8f59c4b8560b6ad2ccd5",
-    "/index.html": "58f6fd7a263308971e3838996bef802b986efe5e",
-    "/main-es2015.0790ca75c02c6267d44a.js": "67950bd85886d3f60ea4f576d092ba9060b8a4ed",
-    "/main-es5.0790ca75c02c6267d44a.js": "56f7bc8cc7136bf36b4f1d76834651309ebbbb6d",
-    "/manifest.webmanifest": "a2d9c62451ddc04d9cc7f7e27ad46a69c36b8fa2",
-    "/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
-    "/polyfills-es5.6696c533341b95a3d617.js": "45c51483238468881240579c3fdecd19144cff17",
-    "/runtime-es2015.1edd2fcf3f9b8f481724.js": "b182828074c4423cc371e3f19b9c2139cafc8422",
-    "/runtime-es5.1edd2fcf3f9b8f481724.js": "dd9b88ceee4037dac228c3ebb087b66eea425b0d",
-    "/styles.c61129d603e1c8706523.css": "5d03457a2aca16051f4b5517bd09617a3778dcb3"
+    "/fondo.becc209b4e4135c633f4.jpg": "bada528027ed3eb0df6adfca6f70f6a8c2431f3b",
+    "/fondo1.ecc714134e57e51eccd0.png": "0de75ba720ade9cff30f8f59c4b8560b6ad2ccd5",
+    "/index.html": "305661110699f0f22662b76c37f668bd555fecac",
+    "/main.3869dfb40a2c7467d558.js": "c366384bd1409e1f0400d11d253e1dfac87e941b",
+    "/manifest.webmanifest": "3ffafe5eb2e263944979568e68a76b753f283288",
+    "/polyfills.00096ed7d93ed26ee6df.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
+    "/runtime.b5d552401db09eece971.js": "eb2b037652a121f84274ac85147d1d968efb1d22",
+    "/styles.ad979b208c4a852a0e03.css": "8a7e8e469a604fc6bcd8ba08c1c4243271594a43"
   },
   "navigationUrls": [
     {
@@ -174,5 +164,6 @@
       "positive": false,
       "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
-  ]
+  ],
+  "navigationRequestStrategy": "performance"
 }
