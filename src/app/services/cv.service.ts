@@ -16,7 +16,6 @@ export class CvService {
 
   getExperiencia() {
     return this.http.get(`${environment.urlApi}/api/info/exp`).subscribe((exp: any) => {
-      console.log(exp.result);
       this.experiencias = exp.result;
       this.changeExp.emit(false);
     }, () => this.changeExp.emit(true));
