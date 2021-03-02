@@ -32,6 +32,8 @@ export class ExpComponent implements OnInit {
   }
 
   cargarInfo() {
+    this.errorApi = false;
+    this.loading = true;
     this.cvSrv.getExperiencia();
   }
 
