@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { JuegosComponent } from './juegos/juegos.component';
 import { ExpComponent } from './exp/exp.component';
 import { InfoPageComponent } from './info-page/info-page.component';
+import { ApiComponent } from './api/api.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { InfoPageComponent } from './info-page/info-page.component';
     YoComponent,
     JuegosComponent,
     ExpComponent,
-    InfoPageComponent
+    InfoPageComponent,
+    ApiComponent
   ]
 })
 export class CvModule { }

@@ -7,6 +7,7 @@ import { YoComponent } from './yo/yo.component';
 import { JuegosComponent } from './juegos/juegos.component';
 import { ExpComponent } from './exp/exp.component';
 import { InfoPageComponent } from './info-page/info-page.component';
+import { ApiComponent } from './api/api.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
       {path:'Juegos', component: JuegosComponent},
       {path:'Experiencia', component: ExpComponent},
       {path:'Info', component: InfoPageComponent},
+      {path:'Api', component: ApiComponent},
     ],
   }
 ];
