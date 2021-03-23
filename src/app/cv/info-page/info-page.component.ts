@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faAngular, faNodeJs, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faTerminal, faServer } from '@fortawesome/free-solid-svg-icons';
+import { faTerminal, faServer, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { CvService } from 'src/app/services/cv.service';
 import { environment } from '../../../environments/environment';
 
@@ -19,6 +19,7 @@ export class InfoPageComponent implements OnInit {
   iconTerminal = faTerminal;
   iconServer = faServer;
   iconGithub = faGithub;
+  iconDataBase = faDatabase;
 
   constructor(
     public cvSrv: CvService

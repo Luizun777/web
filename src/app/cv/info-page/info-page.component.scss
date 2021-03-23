@@ -18,6 +18,9 @@
         &.node {
           color: green;
           margin-right: 0.4rem;
+          &.mongo {
+            font-size: 25px;
+          }
         }
         &.angular {
           color: red;
