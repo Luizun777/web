@@ -141,3 +141,10 @@
 [tooltip][flow^="right"]:hover::after {
   animation: tooltips-horz 300ms ease-out forwards;
 }
+
+.version {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 10px;
+}
