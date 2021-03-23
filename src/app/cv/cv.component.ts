@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faAddressCard, faBriefcase, faGamepad, faInfoCircle, faCloud } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faBriefcase, faGamepad, faInfoCircle, faCloud, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 import { CvService } from '../services/cv.service';
 
@@ -15,6 +15,7 @@ export class CvComponent implements OnInit {
   juegos = faGamepad;
   info = faInfoCircle;
   api = faCloud;
+  proyecto = faLaptopCode;
 
   constructor(
     public cvSrv: CvService,

@@ -12,6 +12,7 @@ export class YoComponent implements OnInit {
   year: number = 1996;
   edad: number;
   separador = faCode;
+  sobreMi: string = 'Trabajo como desarrollador de páginas web usando front con Angular, .Net Core 2.0 para el back aunque también he usado Node.js básico y como base de datos SQL y MongoDB.';
 
   // Redes
   iconGitHub = faGithub;

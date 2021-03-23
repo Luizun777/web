@@ -6,34 +6,34 @@
   grid-gap: 1rem;
   align-items: center;
   justify-items: center;
-  @include telefono {
-    grid-template-columns: auto 1fr;
-    grid-gap: 0rem;
-  }
-  @include tableta {
-    grid-template-columns: auto 1fr;
-    grid-gap: 0rem;
-  }
-  @include desktop {
-    grid-template-columns: auto 1fr;
-    grid-gap: 0rem;
-  }
+  // @include telefono {
+  //   grid-template-columns: auto 1fr;
+  //   grid-gap: 0rem;
+  // }
+  // @include tableta {
+  //   grid-template-columns: auto 1fr;
+  //   grid-gap: 0rem;
+  // }
+  // @include desktop {
+  //   grid-template-columns: auto 1fr;
+  //   grid-gap: 0rem;
+  // }
   .foto-perfil {
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
-    @include telefono {
-      width: 8rem;
-      height: 8rem;
-    }
-    @include tableta {
-      width: 7rem;
-      height: 7rem;
-    }
-    @include desktop {
-      width: 10rem;
-      height: 10rem;
-    }
+    // @include telefono {
+    //   width: 8rem;
+    //   height: 8rem;
+    // }
+    // @include tableta {
+    //   width: 7rem;
+    //   height: 7rem;
+    // }
+    // @include desktop {
+    //   width: 10rem;
+    //   height: 10rem;
+    // }
   }
   .datos {
     display: grid;

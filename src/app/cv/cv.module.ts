@@ -10,6 +10,7 @@ import { JuegosComponent } from './juegos/juegos.component';
 import { ExpComponent } from './exp/exp.component';
 import { InfoPageComponent } from './info-page/info-page.component';
 import { ApiComponent } from './api/api.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { ApiComponent } from './api/api.component';
     JuegosComponent,
     ExpComponent,
     InfoPageComponent,
-    ApiComponent
+    ApiComponent,
+    ProyectosComponent
   ]
 })
 export class CvModule { }
