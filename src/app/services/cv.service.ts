@@ -20,4 +20,8 @@ export class CvService {
       this.changeExp.emit(false);
     }, () => this.changeExp.emit(true));
   }
+
+  getCedula(data: any) {
+    return this.http.post(`https://cedulaprofesional.sep.gob.mx/cedula/buscaCedulaJson.action`, data);
+  }
 }
