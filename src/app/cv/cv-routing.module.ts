@@ -9,6 +9,7 @@ import { ExpComponent } from './exp/exp.component';
 import { InfoPageComponent } from './info-page/info-page.component';
 import { ApiComponent } from './api/api.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { CedulaComponent } from './cedula/cedula.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
       {path:'Info', component: InfoPageComponent},
       // {path:'Api', component: ApiComponent},
       {path:'Proyecto', component: ProyectosComponent},
+      {path:'cedula', component: CedulaComponent},
     ],
   }
 ];

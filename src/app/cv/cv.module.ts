@@ -11,6 +11,7 @@ import { ExpComponent } from './exp/exp.component';
 import { InfoPageComponent } from './info-page/info-page.component';
 import { ApiComponent } from './api/api.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { CedulaComponent } from './cedula/cedula.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
     ExpComponent,
     InfoPageComponent,
     ApiComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    CedulaComponent
   ]
 })
 export class CvModule { }
