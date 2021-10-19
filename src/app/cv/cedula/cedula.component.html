@@ -1,57 +1,69 @@
-<form [formGroup]="orderForm">
-  <mat-form-field appearance="legacy">
-    <mat-label>Nombre</mat-label>
-    <input matInput formControlName="nombre" (keyup)="getCedula()" required>
-  </mat-form-field>
-  <mat-form-field appearance="legacy">
-    <mat-label>Primer apellido</mat-label>
-    <input matInput formControlName="paterno" (keyup)="getCedula()" required>
-  </mat-form-field>
-  <mat-form-field appearance="legacy">
-    <mat-label>Segundo apellido</mat-label>
-    <input matInput formControlName="materno" (keyup)="getCedula()">
-  </mat-form-field>
-</form>
-<ng-container *ngIf="loadTable">
-  <div class="contenido-load">
-    <mat-spinner></mat-spinner>
+<div class="contenido">
+  <form [formGroup]="orderForm">
+    <mat-form-field appearance="legacy" class="space">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" (ngModelChange)="getCedula()" required>
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="space">
+      <mat-label>Primer apellido</mat-label>
+      <input matInput formControlName="paterno" (ngModelChange)="getCedula()" required>
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Segundo apellido</mat-label>
+      <input matInput formControlName="materno" (ngModelChange)="getCedula()">
+    </mat-form-field>
+  </form>
+  <ng-container *ngIf="loadTable">
+    <div class="contenido-load">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-container>
+  <div class="component-table" [hidden]="loadTable">
+    <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="idCedula">
+        <th mat-header-cell *matHeaderCellDef class="num-cedula"> No. cédula </th>
+        <td mat-cell *matCellDef="let element"> {{element.idCedula}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef class="name"> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.name | titlecase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tipo">
+        <th mat-header-cell *matHeaderCellDef class="small-colum"> Tipo </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sexo">
+        <th mat-header-cell *matHeaderCellDef class="small-colum"> Sexo </th>
+        <td mat-cell *matCellDef="let element">
+          <fa-icon [matTooltip]="element.sexo === '2' ? 'Femenino' : 'Masculino'" [icon]="element.sexo === '2' ? mujer : hombre"></fa-icon>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="anioreg">
+        <th mat-header-cell *matHeaderCellDef class="num-cedula"> Año de expedición </th>
+        <td mat-cell *matCellDef="let element"> {{element.anioreg}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="titulo">
+        <th mat-header-cell *matHeaderCellDef class="big-colum"> Profesión </th>
+        <td mat-cell *matCellDef="let element"> {{element.titulo}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="desins">
+        <th mat-header-cell *matHeaderCellDef class="big-colum"> Institución </th>
+        <td mat-cell *matCellDef="let element"> {{element.desins}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No hay datos que coincidan con: {{nameFull}}</td>
+      </tr>
+    </table>
   </div>
-</ng-container>
-<div class="contenedor mat-elevation-z8" [hidden]="loadTable">
-  <table mat-table [dataSource]="dataSource">
-
-    <!-- Position Column -->
-    <ng-container matColumnDef="idCedula">
-      <th mat-header-cell *matHeaderCellDef> No. cédula </th>
-      <td mat-cell *matCellDef="let element"> {{element.idCedula}} </td>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Nombre </th>
-      <td mat-cell *matCellDef="let element"> {{element.name | titlecase}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="tipo">
-      <th mat-header-cell *matHeaderCellDef> Tipo </th>
-      <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="sexo">
-      <th mat-header-cell *matHeaderCellDef> Sexo </th>
-      <td mat-cell *matCellDef="let element">
-        <fa-icon [matTooltip]="element.sexo === '2' ? 'Femenino' : 'Masculino'" [icon]="element.sexo === '2' ? mujer : hombre"></fa-icon>
-      </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-    <!-- Row shown when there is no matching data. -->
-    <tr class="mat-row" *matNoDataRow>
-      <td class="mat-cell" colspan="4">No hay datos que coincidan con: {{nameFull}}</td>
-    </tr>
-  </table>
   <mat-paginator pageSize="3"></mat-paginator>
 </div>

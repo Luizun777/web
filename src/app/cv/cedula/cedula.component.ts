@@ -17,7 +17,7 @@ export class CedulaComponent implements OnInit {
   hombre = faMale;
   mujer = faFemale;
 
-  displayedColumns: string[] = ['idCedula', 'name', 'tipo', 'sexo'];
+  displayedColumns: string[] = ['idCedula', 'name', 'tipo', 'sexo', 'anioreg', 'titulo', 'desins'];
   dataSource = new MatTableDataSource<any>([]);
   loadTable: boolean;
 

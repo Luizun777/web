@@ -1,12 +1,43 @@
-.contenedor {
-  margin-bottom: 1rem;
-}
+@import '../../../styles';
 
-table {
-  width: 100%;
+.contenido {
+  display: flex;
+  flex-direction: column;
 }
 
 .contenido-load {
-  justify-content: center;
   display: flex;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+td,
+th {
+    text-align: center !important;
+}
+
+.component-table {
+  overflow: auto;
+}
+
+.num-cedula {
+  min-width: 8rem;
+}
+
+.name {
+  min-width: 15rem;
+}
+
+.big-colum {
+  min-width: 20rem;
+}
+
+.small-colum {
+  min-width: 5rem;
 }
