@@ -3,6 +3,24 @@
 .contenido {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.contenido-info {
+  text-align: center;
+  margin: 1rem 0rem;
+  a {
+    color: #333;
+  }
+}
+
+.space {
+  margin-right: 1rem;
+}
+
+fa-icon {
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .contenido-load {
@@ -19,7 +37,7 @@ form {
 
 td,
 th {
-    text-align: center !important;
+    text-align: center;
 }
 
 .component-table {
@@ -28,16 +46,25 @@ th {
 
 .num-cedula {
   min-width: 8rem;
+  text-align: center;
 }
 
 .name {
   min-width: 15rem;
+  text-align: center;
 }
 
 .big-colum {
   min-width: 20rem;
+  text-align: center;
 }
 
 .small-colum {
   min-width: 5rem;
+  text-align: center;
+}
+
+.no-items {
+  text-align: start;
+  padding-left: 1rem;
 }
