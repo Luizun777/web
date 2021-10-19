@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { CvService } from 'src/app/services/cv.service';
 import { faFemale, faMale} from '@fortawesome/free-solid-svg-icons';
@@ -23,7 +23,14 @@ export class CedulaComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private cvSrv: CvService, private formBuilder: FormBuilder) { }
+  constructor(private cvSrv: CvService, private formBuilder: FormBuilder, private paginatorIntl: MatPaginatorIntl) {
+    this.paginatorIntl.getRangeLabel = this.rangeLabel;
+    this.paginatorIntl.itemsPerPageLabel = `Cédulas por pagina`;
+    this.paginatorIntl.nextPageLabel = `Siguiente página`;
+    this.paginatorIntl.previousPageLabel = `Página anterior`;
+    this.paginatorIntl.firstPageLabel = `Primera página`;
+    this.paginatorIntl.lastPageLabel = `Última página`;
+  }
 
   ngOnInit(): void {
     this.formInit();
@@ -48,7 +55,7 @@ export class CedulaComponent implements OnInit {
     const {nombre, paterno, materno} = this.orderForm.value;
     this.nameFull = `${nombre} ${paterno} ${materno}`;
     const payload = {
-      maxResult:'100000',
+      maxResult:'1000000',
       nombre,
       paterno,
       materno,
@@ -65,9 +72,21 @@ export class CedulaComponent implements OnInit {
       });
       this.loadTable = false;
       this.dataSource = new MatTableDataSource<any>(lista);
-      console.log(lista);
       this.dataSource.paginator = this.paginator;
     });
+  }
+
+  rangeLabel(page: number, pageSize: number, length: number): string {
+    if (length === 0 || pageSize === 0) {
+        return `0 de ${length}`;
+    }
+    length = Math.max(length, 0);
+    const startIndex = page * pageSize;
+    const endIndex =
+        startIndex < length
+            ? Math.min(startIndex + pageSize, length)
+            : startIndex + pageSize;
+    return `${startIndex + 1} - ${endIndex} de ${length}`;
   }
 
 }
