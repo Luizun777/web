@@ -160,3 +160,12 @@ h4 {
 .accordion {
   padding-bottom: 10px;
 }
+.grid-cargando {
+  display: grid;
+  justify-items: center;
+  .texto {
+    width: 85%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}

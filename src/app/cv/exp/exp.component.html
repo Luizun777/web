@@ -14,7 +14,10 @@
   </ng-container>
   <ng-template #noError>
     <ng-container *ngIf="loading; else experienciasExist">
-      <div class="conteido-carga">
+      <div class="conteido-carga grid-cargando">
+        <div class="texto">
+          Cargando servidores por favor espere esto puede tardar unos minutos al principio...
+        </div>
         <div class="spinner-grow text-dark" role="status">
           <span class="sr-only">Loading...</span>
         </div>
@@ -30,7 +33,7 @@
             </button>
           </h2>
         </div>
-    
+
         <div [id]="'collaps-'+i" class="collapse" [ngClass]="{'show': i === 0}" [attr.aria-labelledby]="'collapse-'+i" data-parent="#accordion">
           <div class="card-body">
             <div class="puesto">
