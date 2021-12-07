@@ -16,6 +16,7 @@ export class CedulaComponent implements OnInit {
   nameFull: string;
   hombre = faMale;
   mujer = faFemale;
+  peticionExist: boolean;
 
   displayedColumns: string[] = ['idCedula', 'name', 'tipo', 'sexo', 'anioreg', 'titulo', 'desins'];
   dataSource = new MatTableDataSource<any>([]);
@@ -24,6 +25,7 @@ export class CedulaComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private cvSrv: CvService, private formBuilder: FormBuilder, private paginatorIntl: MatPaginatorIntl) {
+    this.peticionExist = true;
     this.paginatorIntl.getRangeLabel = this.rangeLabel;
     this.paginatorIntl.itemsPerPageLabel = `Cédulas por pagina`;
     this.paginatorIntl.nextPageLabel = `Siguiente página`;
@@ -64,7 +66,18 @@ export class CedulaComponent implements OnInit {
     const data = JSON.stringify(payload);
     form.append('json', data);
     this.cvSrv.getCedula(form).subscribe(({items}: any) => {
+      this.peticionExist = false;
       const lista = items.map((person: any) => {
+        const { anioreg, desins, idCedula, paterno, materno, nombre, sexo, tipo, titulo } = person;
+        return {
+          anioreg, desins, idCedula, sexo, tipo, titulo, name: `${nombre} ${paterno} ${materno}`
+        };
+      });
+      this.loadTable = false;
+      this.dataSource = new MatTableDataSource<any>(lista);
+      this.dataSource.paginator = this.paginator;
+    }, () => {
+      const lista = this.cvSrv.cedulaLocal.map((person: any) => {
         const { anioreg, desins, idCedula, paterno, materno, nombre, sexo, tipo, titulo } = person;
         return {
           anioreg, desins, idCedula, sexo, tipo, titulo, name: `${nombre} ${paterno} ${materno}`

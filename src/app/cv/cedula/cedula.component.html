@@ -1,10 +1,11 @@
 <div class="contenido">
   <div class="contenido-info">
+    <h5>{{!peticionExist ? 'Cédulas profesionales' : 'Cédula profesionale'}}</h5>
     <a class="red" href="https://cedulaprofesional.sep.gob.mx/cedula/presidencia/indexAvanzada.action" target="_blank">
-      Enlace oficial para verifica cedulasa
+      Enlace oficial para verificar cédula
     </a>
   </div>
-  <form [formGroup]="orderForm">
+  <form [formGroup]="orderForm" [hidden]="peticionExist">
     <mat-form-field appearance="legacy" class="space">
       <mat-label>Nombre</mat-label>
       <input matInput formControlName="nombre" (ngModelChange)="getCedula()" required>
@@ -70,5 +71,5 @@
       </tr>
     </table>
   </div>
-  <mat-paginator pageSize="3" showFirstLastButtons></mat-paginator>
+  <mat-paginator pageSize="3" showFirstLastButtons [hidden]="peticionExist"></mat-paginator>
 </div>
