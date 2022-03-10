@@ -16441,7 +16441,7 @@ CedulaComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineCo
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](!ctx.peticionExist ? "C\u00E9dulas profesionales" : "C\u00E9dula profesionale");
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate"](!ctx.peticionExist ? "C\u00E9dulas profesionales" : "C\u00E9dula profesional");
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("formGroup", ctx.orderForm)("hidden", ctx.peticionExist);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](13);
